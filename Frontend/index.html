@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <h1>Task Manager</h1>
+
+  <div id="auth-section">
+    <h2>Login to Continue</h2>
+    <button id="loginWithCognito">Login with AWS Cognito</button>
+  </div>
+
+  <div id="task-section" style="display:none;">
+    <h2>Create New Task</h2>
+    <input type="text" id="taskName" placeholder="Task title">
+    <input type="text" id="taskDescription" placeholder="Task description">
+    <input type="file" id="fileInput">
+    <button id="createTaskBtn">Create Task</button>
+    <button id="logoutBtn">Logout</button>
+
+    <h2>Pending Tasks</h2>
+    <div id="pendingTasks" class="task-grid"></div>
+
+    <h2>Completed Tasks</h2>
+    <div id="completedTasks" class="task-grid"></div>
+  </div>
+
+  <!-- Script Modules -->
+  <script type="module" src="config.js"></script>
+  <script type="module" src="upload.js"></script>
+  <script type="module" src="api.js"></script>
+  <script type="module" src="taskActions.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
